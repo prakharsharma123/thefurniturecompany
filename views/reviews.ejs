@@ -1,0 +1,5 @@
+<%- include('partials/head') %><%- include('partials/header') %>
+<section class="w"><div class="hd"><small>Reviews</small><h2>Customer <span class="gr">reviews</span></h2></div><p style="text-align:center;color:var(--mut)"><b style="font-size:2rem;color:var(--ink)">4.8</b> <span class="st">★★★★★</span> from 126 verified orders</p>
+<%- include('partials/reviews',{list:reviews}) %>
+<div class="box" style="margin-top:20px;max-width:520px;margin-inline:auto"><h3>Write a review</h3><p style="color:var(--mut);font-size:.85rem">Only customers with a completed order can review. Enter your order number to continue.</p><label for="oid">Order number</label><input id="oid" placeholder="PN-26001"></div></section>
+<%- include('partials/footer') %>

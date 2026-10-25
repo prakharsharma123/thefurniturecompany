@@ -1,0 +1,6 @@
+<%- include('partials/head') %><%- include('partials/header') %>
+<section class="w"><div class="hd"><small>Catalog</small><h2>Shop <span class="gr">all products</span></h2></div>
+<div class="tabs"><% ['All',...cats].forEach(c=>{ %><a class="tab" style="text-decoration:none" aria-pressed="<%= c===cat %>" href="/shop?cat=<%= c %>"><%= c %></a><% }) %></div>
+<div class="grid"><% products.filter(p=>cat==='All'||p.c===cat).forEach(p=>{ %><%- include('partials/card',{p}) %><% }) %></div>
+<p style="text-align:center;color:var(--mut);margin-top:24px">Ready products can be bought online. Made-to-measure items start with a free quote.</p></section>
+<%- include('partials/footer') %>

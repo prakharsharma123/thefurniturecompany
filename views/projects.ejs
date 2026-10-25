@@ -1,0 +1,83 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+
+<section class="w">
+  <div class="hd">
+    <small>Projects</small>
+    <h2>Before and after <span class="gr">gallery</span></h2>
+  </div>
+
+  <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr))">
+
+    <div>
+      <div class="ba">
+        <div><img class="pi" src="/images/afkitchen.png" alt="Kitchen after"></div>
+        <div class="bf"><img class="pi" src="/images/bfkitchen.png" alt="Kitchen before"></div>
+        <span style="left:8px">Before</span><span style="right:8px">After</span>
+        <input type="range" value="100" aria-label="Compare before and after">
+      </div>
+      <h3 style="margin-top:10px">Kitchen, Gomti Nagar</h3>
+    </div>
+
+    <div>
+      <div class="ba">
+        <div><img class="pi" src="/images/aflivingarea.png" alt="Living Area after"></div>
+        <div class="bf"><img class="pi" src="/images/bflivingarea.png" alt="Living Area before"></div>
+        <span style="left:8px">Before</span><span style="right:8px">After</span>
+        <input type="range" value="100" aria-label="Compare before and after">
+      </div>
+      <h3 style="margin-top:10px">Wardrobe, Aliganj</h3>
+    </div>
+
+    <div>
+      <div class="ba">
+        <div><img class="pi" src="/images/afoffice.png" alt="Site office after"></div>
+        <div class="bf"><img class="pi" src="/images/bfoffice.png" alt="Site office before"></div>
+        <span style="left:8px">Before</span><span style="right:8px">After</span>
+        <input type="range" value="100" aria-label="Compare before and after">
+      </div>
+      <h3 style="margin-top:10px">Site office, Kanpur Road</h3>
+    </div>
+
+    <div>
+      <div class="ba">
+        <div><img class="pi" src="/images/afliving.png" alt="Living room after"></div>
+        <div class="bf"><img class="pi" src="/images/bfliving.png" alt="Living room before"></div>
+        <span style="left:8px">Before</span><span style="right:8px">After</span>
+        <input type="range" value="100" aria-label="Compare before and after">
+      </div>
+      <h3 style="margin-top:10px">Panel room, Transport Nagar</h3>
+    </div>
+
+  </div>
+
+  <div class="box" style="margin-top:24px;text-align:center">
+    <h3>Project walkthrough video</h3>
+    <p style="color:var(--mut)">A video of a completed installation goes here.</p>
+  </div>
+</section>
+
+<script>
+  // The photo reveals from "before" to "after" as the card scrolls up the screen.
+  // Dragging the slider still works.
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.ba').forEach(box => {
+    const range = box.querySelector('input');
+    const before = box.querySelector('.bf');
+    const set = v => { range.value = v; before.style.clipPath = 'inset(0 ' + (100 - v) + '% 0 0)'; };
+    range.addEventListener('input', () => set(range.value));
+    set(still ? 50 : 100);
+    if (still) return;
+    let busy = false;
+    const update = () => {
+      busy = false;
+      const top = box.getBoundingClientRect().top, h = innerHeight;
+      const progress = Math.min(1, Math.max(0, (h - top - h * 0.15) / (h * 0.6)));
+      set(Math.round(100 - progress * 100));
+    };
+    addEventListener('scroll', () => { if (!busy) { busy = true; requestAnimationFrame(update); } }, { passive: true });
+    update();
+  });
+</script>
+
+<%- include('partials/footer') %>

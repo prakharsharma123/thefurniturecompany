@@ -1,0 +1,4 @@
+<article class="card"><a href="/product/<%= p.id %>" style="text-decoration:none;color:inherit;display:block">
+<div class="art"><% if(p.o){ %><span class="off"><%= p.o %>% off</span><% } %><%- imgTag('p'+p.id, p.t, p.col, p.n) %></div>
+<div class="m"><span><%= p.c %></span><span><span class="st">★</span> <%= p.r %></span></div><h3><%= p.n %></h3>
+<div class="pr"><b><%= inr(p.s[0][1]) %></b><% if(p.o){ %><s><%= inr(was(p,0)) %></s><% } %> <em><%= p.m==='b'?'Buy online':'Quote' %></em></div></a></article>

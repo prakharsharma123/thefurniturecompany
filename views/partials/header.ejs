@@ -1,0 +1,6 @@
+
+<div class="top"><div class="w"><span>Call us: <a href="tel:+918318276922">+91 8318276922</a></span><span>Book a free design visit in Lucknow. <a href="/contact">Enquire now</a></span></div></div>
+<header><div class="w"><a class="logo" href="/home"><span class="logo-wrap"><img src="/images/biglogo.jpg" alt="PN Modular System"></span></a>
+<nav id="nav"><% [["/home","Home"],["/about","About"],["/shop","Shop"],["/projects","Projects"],["/reviews","Reviews"],["/blog","Blog"],["/contact","Contact"]].forEach(l=>{ %><a href="<%= l[0] %>" class="<%= path===l[0]||(path.startsWith(l[0]+'/'))?'on':'' %>"><%= l[1] %></a><% }) %></nav>
+<div class="hb"><button class="ic" aria-label="Open cart" onclick="cart(1)">🛒<i id="cn">0</i></button><button class="ic menu" id="mb" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav" onclick="var n=document.getElementById('nav'),o=n.classList.toggle('open');this.setAttribute('aria-expanded',o);this.textContent=o?'✕':'☰'">☰</button></div></div></header>
+<main>

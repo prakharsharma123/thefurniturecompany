@@ -1,0 +1,4 @@
+<%- include('../partials/head') %><%- include('../partials/header') %>
+<section class="w" style="max-width:640px"><div class="hd"><small>Blog</small><h2>Write a <span class="gr">new post</span></h2></div>
+<form class="box" method="POST" action="/blog"><label for="t">Title</label><input id="t" name="title" required><label for="u">Author</label><input id="u" name="username" required><label for="c">Content</label><textarea id="c" name="content" rows="8" required></textarea><p><button class="btn">Publish</button> <a class="btn o" href="/blog">Cancel</a></p></form></section>
+<%- include('../partials/footer') %>

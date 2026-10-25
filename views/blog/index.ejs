@@ -1,0 +1,5 @@
+<%- include('../partials/head') %><%- include('../partials/header') %>
+<section class="w"><div class="hd"><small>News and blogs</small><h2>Design tips and <span class="gr">buying guides</span></h2></div>
+<p style="text-align:center"><a class="btn" href="/blog/new">Write a new post</a></p>
+<div class="blogs"><% posts.forEach(post=>{ %><%- include('../partials/postcard',{post}) %><% }) %></div></section>
+<%- include('../partials/footer') %>

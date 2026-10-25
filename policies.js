@@ -1,0 +1,48 @@
+// Sample policy text. Words in [square brackets] must be filled in or confirmed with the client.
+// Each policy is [title, sections]. A section is [heading, text] or [heading, [list of points]].
+const CO = "PN Modular System Private Limited";
+module.exports = {
+  privacy: ["Privacy policy", [
+    ["Introduction", `${CO} ("we", "us") respects your privacy. This policy explains what personal information we collect when you use our website, place an order or contact us, and how we use and protect it. We are located at Gala No. E-170, Phase 1, Near HP Petrol Pump, Kanpur Road, Transport Nagar, Lucknow, Uttar Pradesh 226012.`],
+    ["Information we collect", ["Name, phone number, email address, and delivery or site address.", "Order details and payment status. We never see or store your card, UPI or bank details.", "Room measurements, photos and design preferences you share for quotes.", "Technical data such as device, browser, pages visited and cookies."]],
+    ["How we use your information", ["To process orders, deliver and install products.", "To prepare quotes and reply to your enquiries.", "To issue GST invoices and keep accounting records.", "To send order updates, and offers only if you agree to receive them.", "To improve our website and services."]],
+    ["Who we share it with", "We share only what is needed with our payment gateway, courier or transport partners and installation team. We do not sell your personal information to anyone."],
+    ["Payments", "Payments are processed by our payment gateway partner [Razorpay / PayU / Cashfree] using their own secure systems."],
+    ["Cookies and analytics", "We use cookies and tools such as Google Analytics [and Meta Pixel] to understand how visitors use the site. You can turn cookies off in your browser settings, though some features may stop working."],
+    ["How long we keep your data", "We keep order and invoice records for as long as tax and accounting law requires. Other data is kept only as long as it is needed for the purpose it was collected."],
+    ["Your rights", ["Ask to see, correct or delete the information we hold about you.", "Withdraw consent for marketing messages (WhatsApp, SMS or email) at any time.", "Write to us at [email address] and we will respond within [7] working days."]],
+    ["Security", "We use SSL encryption and limit staff access to personal data. No online system is completely secure, but we take reasonable steps to protect your information."],
+    ["Children", "This website is not meant for people under 18 years of age."],
+    ["Grievance contact", "[Name of grievance officer], [email address], [phone number]. Working hours: Monday to Saturday, 10 AM to 6 PM."],
+    ["Changes to this policy", "We may update this policy from time to time. The latest version, with its date, will always be on this page."],
+  ]],
+  terms: ["Terms and conditions", [
+    ["About these terms", `By using this website or placing an order, you agree to these terms. The website is operated by ${CO}, Lucknow, Uttar Pradesh.`],
+    ["Products and prices", ["All prices are in Indian rupees (₹) and [include / exclude] GST.", "Ready products have fixed prices. Prices shown for custom items are starting estimates.", "Colours and finishes in photos may differ slightly from the actual product.", "We may correct pricing or stock errors and cancel an affected order with a full refund."]],
+    ["Placing an order", "An order is confirmed only after we receive payment or the agreed advance. We will confirm by SMS, WhatsApp or email."],
+    ["Custom and made-to-measure work", ["Custom work begins with a site visit and measurement, followed by a design and quote.", "A quote is valid for [15] days.", "Production starts after you approve the design and pay the advance.", "Changes after approval may change the price and delivery time.", "The customer must prepare the site (plumbing, electrical points, access and clear space) before installation."]],
+    ["Payment terms", "For custom orders: [50]% advance at approval, [40]% before dispatch and [10]% after installation. Ready products are paid in full at checkout."],
+    ["Delivery and installation", "Delivery and installation timelines are estimates and may change due to site readiness, weather or transport conditions. See our Refund and shipping policy for details."],
+    ["Warranty", ["Modular kitchens: [5 years]. Wardrobes: [2 years]. Mandir designs: [1 year on structure]. Control panels: [1 year].", "The warranty covers manufacturing defects only.", "It does not cover misuse, water damage, damage by others, alterations, or normal wear and tear."]],
+    ["Customer responsibilities", "Please give accurate information and measurements, and make sure someone is present to give access to the site on the delivery and installation dates."],
+    ["Reviews", "Only customers with a completed order can post reviews. We may remove reviews that are abusive, false or unrelated to our products."],
+    ["Intellectual property", `All text, photos, designs and logos on this website belong to ${CO} and may not be copied without written permission.`],
+    ["Limitation of liability", "To the extent allowed by law, our liability is limited to the amount you paid for the product or service concerned."],
+    ["Governing law", "These terms are governed by the laws of India. Any dispute will be handled by the courts of Lucknow, Uttar Pradesh."],
+    ["Contact", "Questions about these terms: [email address] or [phone number]."],
+  ]],
+  refund: ["Refund and shipping policy", [
+    ["Where we deliver", "We deliver and install in [Lucknow / all of Uttar Pradesh / across India]. Enter your pincode at checkout or contact us to check availability."],
+    ["Delivery time", ["Ready stock products: [5 to 7] working days.", "Made-to-order products: [3 to 6] weeks after design approval and advance payment.", "Mandir designs: timeline is given in your quote."]],
+    ["Shipping charges", "Shipping is [free above ₹___ / a flat rate of ₹___ / calculated by pincode and product size]. Transport for mandir designs is [included / charged separately]."],
+    ["Installation", "Installation is done by our own team and is [included / charged at ₹___] in [cities]. We agree on the date with you in advance."],
+    ["When your order arrives", "Please check the products in front of the delivery person. Report any damage or missing items within [48 hours] by phone or email with photos and your order number."],
+    ["Delays", "If the site is not ready or you ask to reschedule, delivery and installation dates will move and extra storage or visit charges may apply."],
+    ["Returns for ready products", ["You can return unused products in original packing within [7] days of delivery.", "Return shipping is paid by the customer unless the product is faulty or wrong.", "Refunds are issued after we inspect the returned product."]],
+    ["Custom-made products", "Made-to-measure kitchens, wardrobes, traditional mandir designs, interiors and control panels cannot be returned or exchanged once production has started."],
+    ["Damaged, faulty or wrong items", "If we sent a damaged or wrong item, we will repair or replace it at no cost, or refund you if that is not possible."],
+    ["Cancellations", ["Before production starts: full refund, less payment gateway charges of about [2]%.", "After production starts: the advance is [non-refundable / refundable up to __%].", "Cancellations must be sent in writing to [email address] with your order number."]],
+    ["How refunds are paid", "Approved refunds go back to your original payment method within [5 to 7] working days."],
+    ["Contact", `${CO}, Gala No. E-170, Phase 1, Kanpur Road, Transport Nagar, Lucknow 226012. Email [email address], phone [phone number]. Monday to Saturday, 10 AM to 6 PM.`],
+  ]],
+};

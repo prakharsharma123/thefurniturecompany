@@ -1,0 +1,15 @@
+{
+  "name": "pn-modular-system",
+  "version": "1.0.0",
+  "description": "PN Modular System website (Node.js, Express, EJS)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.22.3",
+    "method-override": "^3.0.0"
+  }
+}

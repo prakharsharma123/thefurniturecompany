@@ -1,0 +1,5 @@
+<%- include('partials/head') %><%- include('partials/header') %>
+<section class="w"><div class="hd"><small>Policies</small><h2><%= policy[0] %></h2></div>
+<div class="tabs"><% [['privacy','Privacy'],['terms','Terms'],['refund','Refund and shipping']].forEach(x=>{ %><a class="tab" style="text-decoration:none" aria-pressed="<%= x[0]===key %>" href="/<%= x[0] %>"><%= x[1] %></a><% }) %></div>
+<div class="pol"><p style="font-size:.85rem">Last updated: [date]</p><% policy[1].forEach(s=>{ %><h3><%= s[0] %></h3><% if(Array.isArray(s[1])){ %><ul><% s[1].forEach(li=>{ %><li><%= li %></li><% }) %></ul><% } else { %><p><%= s[1] %></p><% } %><% }) %><p style="margin-top:24px;font-size:.8rem">Sample wording. Fill in the words in [square brackets] and have this reviewed before launch.</p></div></section>
+<%- include('partials/footer') %>

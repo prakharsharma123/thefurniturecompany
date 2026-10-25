@@ -1,0 +1,13 @@
+<%- include('partials/head') %><%- include('partials/header') %>
+<% const W2={Kitchens:'5 years',Wardrobes:'2 years',Mandir:'1 year on structure','Control Panels':'1 year',Interiors:'1 year on workmanship'}; %>
+<section class="w"><p style="color:var(--mut);font-size:.85rem"><a href="/shop">Shop</a> / <%= p.c %> / <%= p.n %></p>
+<div class="pdp"><div><div class="art" id="pa" style="padding:<%= (typeof IMG!=='undefined'&&IMG['p'+p.id]) ? 0 : 30 %>px;overflow:hidden"><%- pic('p'+p.id, ()=>art(p.t,p.col)) %></div>
+<% if(!(typeof IMG!=='undefined'&&IMG['p'+p.id])){ %><div class="thumbs"><% FIN.forEach(f=>{ %><div class="art" onclick="document.getElementById('pa').innerHTML=this.innerHTML"><%- art(p.t,f) %></div><% }) %></div><small style="color:var(--mut)">Tap a swatch to preview a finish</small><% } %></div>
+<div id="pinfo" data-id="<%= p.id %>" data-name="<%= p.n %>"><span class="vf"><%= p.c %></span><h1 style="font-size:2rem"><%= p.n %></h1><p><span class="st">★</span> <%= p.r %> from verified buyers</p><p style="color:var(--mut)"><%= p.d %></p>
+<b>Size</b><div class="sz" id="sz"><% p.s.forEach((z,j)=>{ %><button type="button" aria-pressed="<%= j===0 %>" data-k="<%= j %>" data-p="<%= z[1] %>" data-w="<%= p.o?Math.round(was(p,j)):0 %>" data-l="<%= z[0] %>"><%= z[0] %></button><% }) %></div>
+<div class="pr"><b id="pp" style="font-size:1.7rem"><%= inr(p.s[0][1]) %></b><s id="pw"><%= p.o?inr(was(p,0)):'' %></s><br><small style="color:var(--mut)"><%= p.m==='q'?'Starting estimate. Final price after site visit.':'Inclusive of GST' %></small></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin:16px 0"><% if(p.m==='b'){ %><button class="btn" onclick="buy(1)">Buy now</button><button class="btn o" onclick="buy(0)">Add to cart</button><% } else { %><a class="btn" href="/contact">Get free quote</a><% } %></div>
+<table class="sp"><tr><td>Category</td><td><%= p.c %></td></tr><tr><td>Material</td><td><%= p.d %></td></tr><tr><td>Warranty</td><td><%= W2[p.c] %></td></tr><tr><td>Delivery</td><td><%= p.m==='b'?'5 to 7 days':'3 to 6 weeks after design approval' %></td></tr><tr><td>Installation</td><td>By our team, Lucknow and UP</td></tr><tr><td>Returns</td><td><%= p.m==='b'?'7 days, unused':'Custom item, non-returnable' %></td></tr></table></div></div>
+<h3 style="margin:28px 0 12px">Reviews for this product</h3><%- include('partials/reviews',{list:reviews}) %>
+<% if(related.length){ %><h3 style="margin:28px 0 12px">You may also like</h3><div class="grid"><% related.forEach(p=>{ %><%- include('partials/card',{p}) %><% }) %></div><% } %></section>
+<%- include('partials/footer') %>

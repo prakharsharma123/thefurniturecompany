@@ -1,0 +1,6 @@
+<%- include('../partials/head') %><%- include('../partials/header') %>
+<section class="w" style="max-width:760px"><p style="color:var(--mut);font-size:.85rem"><a href="/blog">Blog</a> / <%= post.title %></p><h1 style="font-size:2.2rem"><%= post.title %></h1><p style="color:var(--mut)">By <%= post.username %> on <%= post.date %></p>
+<div class="art" style="margin:18px 0;position:relative;height:280px;display:grid;place-items:center"><%- pic('blog'+(post.id-1), ()=>art(products[post.id%products.length].t, products[post.id%products.length].col)) %></div>
+<div style="white-space:pre-line;line-height:1.8"><%= post.content %></div>
+<div style="display:flex;gap:10px;margin-top:24px"><a class="btn" href="/blog/<%= post.id %>/edit">Edit</a><form method="POST" action="/blog/<%= post.id %>?_method=DELETE" onsubmit="return confirm('Delete this post?')"><button class="btn o">Delete</button></form></div></section>
+<%- include('../partials/footer') %>
